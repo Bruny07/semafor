@@ -115,7 +115,7 @@ namespace semafor
     class IntersectieBrancoveanu
     {
         public static int semInainte = 0;
-        public static int semDreapta = 0;
+        public static int semStanga = 0;
         public static void intersectie()
         {
             while (true)
@@ -123,21 +123,15 @@ namespace semafor
                 if (semInainte == 0)
                 {
                     semInainte = 1;
-                    //Console.WriteLine("Semafor Intersectie Cosminului: Verde");
+                    semStanga = 0;
                     Thread.Sleep(5000);
                 }
                 else if (semInainte == 1)
                 {
                     semInainte = 0;
-                    Console.WriteLine("Semafor Intersectie Cosminului: Rosu");
+                    semStanga = 1;
                     Thread.Sleep(5000);
                 }
-                else if(semInainte == 0)
-                {
-
-                }
-
-
 
             }
         }
